@@ -1,1 +1,1 @@
-export { default as EnvSchema } from './env-schema';
+export { type Env, EnvSchema } from './env-schema';
