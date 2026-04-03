@@ -1,0 +1,11 @@
+{
+  "extends": "./packages/@config/tsconfig.base",
+  "compilerOptions": {
+    "types": ["bun"],
+
+    // Path Alias
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
