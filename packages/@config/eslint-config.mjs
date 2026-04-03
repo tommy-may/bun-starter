@@ -26,7 +26,10 @@ const defaultConfig = [
   {
     languageOptions: {
       parserOptions: {
-        projectService: true,
+        // projectService: true,
+        projectService: {
+          allowDefaultProject: ['*.mjs', 'packages/@config/*.mjs'],
+        },
         tsconfigRootDir: import.meta.dirname,
       },
     },
