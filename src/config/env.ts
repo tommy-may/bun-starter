@@ -1,6 +1,6 @@
 import * as z from 'zod';
 
-import { type Env, EnvSchema } from '@/schemas';
+import { type Env, EnvSchema } from '@/schema/env';
 
 const { data, error, success } = EnvSchema.safeParse(process.env);
 

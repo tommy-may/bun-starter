@@ -57,7 +57,7 @@ const defaultConfig = [
           prefer: 'type-imports',
         },
       ],
-      '@typescript-eslint/explicit-function-return-type': 'warn',
+      // '@typescript-eslint/explicit-function-return-type': 'warn',
     },
   },
 ];
