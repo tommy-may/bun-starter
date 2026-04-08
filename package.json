@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "start:dev": "bun run --watch src/index.ts",
+    "type:check": "tsc --noEmit",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
     "lint": "eslint .",

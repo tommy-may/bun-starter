@@ -72,7 +72,55 @@ const perfectionistConfig = [
     },
     rules: {
       'perfectionist/sort-exports': 'error',
-      'perfectionist/sort-imports': 'error',
+      'perfectionist/sort-imports': [
+        'error',
+        {
+          type: 'natural',
+          order: 'asc',
+          fallbackSort: { type: 'natural' },
+          ignoreCase: true,
+          specialCharacters: 'keep',
+          sortBy: 'path',
+          internalPattern: ['^~/.+', '^@/.+', '^#.+'],
+          partitionByComment: false,
+          partitionByNewLine: false,
+          newlinesBetween: 1,
+          newlinesInside: 0,
+          maxLineLength: undefined,
+          groups: [
+            'react',
+            'type-import',
+            ['value-builtin', 'value-external'],
+            'type-internal',
+
+            'internal-config',
+            { newlinesBetween: 1 },
+            'internal-schema',
+
+            'value-internal',
+            ['type-parent', 'type-sibling', 'type-index'],
+            ['value-parent', 'value-sibling', 'value-index'],
+            'ts-equals-import',
+            'unknown',
+          ],
+          customGroups: [
+            {
+              groupName: 'react',
+              elementNamePattern: ['^react$', '^react-.+', '^react/.+'],
+            },
+            {
+              groupName: 'internal-config',
+              elementNamePattern: '^@/config/.+',
+            },
+            {
+              groupName: 'internal-schema',
+              elementNamePattern: '^@/schema/.+',
+            },
+          ],
+          environment: 'bun',
+          useExperimentalDependencyDetection: true,
+        },
+      ],
       'perfectionist/sort-intersection-types': 'error',
       'perfectionist/sort-named-exports': 'error',
       'perfectionist/sort-named-imports': 'error',
