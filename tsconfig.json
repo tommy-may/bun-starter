@@ -5,7 +5,7 @@
 
     // Path Alias
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/config/*", "./src/*"]
     }
   }
 }

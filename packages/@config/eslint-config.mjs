@@ -77,7 +77,7 @@ const perfectionistConfig = [
         {
           type: 'natural',
           order: 'asc',
-          fallbackSort: { type: 'natural' },
+          fallbackSort: { type: 'unsorted' },
           ignoreCase: true,
           specialCharacters: 'keep',
           sortBy: 'path',
@@ -92,11 +92,6 @@ const perfectionistConfig = [
             'type-import',
             ['value-builtin', 'value-external'],
             'type-internal',
-
-            'internal-config',
-            { newlinesBetween: 1 },
-            'internal-schema',
-
             'value-internal',
             ['type-parent', 'type-sibling', 'type-index'],
             ['value-parent', 'value-sibling', 'value-index'],
@@ -107,14 +102,6 @@ const perfectionistConfig = [
             {
               groupName: 'react',
               elementNamePattern: ['^react$', '^react-.+', '^react/.+'],
-            },
-            {
-              groupName: 'internal-config',
-              elementNamePattern: '^@/config/.+',
-            },
-            {
-              groupName: 'internal-schema',
-              elementNamePattern: '^@/schema/.+',
             },
           ],
           environment: 'bun',
